@@ -1,13 +1,13 @@
 import Navigation from "@/components/navigation";
 import React from "react";
 
-const Layout = ({ children }: { children: React.ReactNode }) => {
+const layout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <>
+    <main className="h-full">
       <Navigation />
       {children}
-    </>
+    </main>
   );
 };
 
-export default Layout;
+export default layout;
