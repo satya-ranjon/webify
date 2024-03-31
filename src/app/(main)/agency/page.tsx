@@ -1,3 +1,4 @@
+import AgencyDetails from "@/components/forms/agency-details";
 import { getAuthUserDetails, verifyAndAcceptInvitation } from "@/lib/actions";
 import { currentUser } from "@clerk/nextjs";
 import { Plan } from "@prisma/client";
@@ -37,7 +38,16 @@ const Page = async ({
   }
   const authUser = await currentUser();
 
-  return <div>Agency Page</div>;
+  return (
+    <div className="flex justify-center items-center mt-4">
+      <div className="max-w-[850px] border-[1px] p-4 rounded-xl">
+        <h1 className="text-4xl"> Create An Agency</h1>
+        <AgencyDetails
+          data={{ companyEmail: authUser?.emailAddresses[0].emailAddress }}
+        />
+      </div>
+    </div>
+  );
 };
 
 export default Page;
