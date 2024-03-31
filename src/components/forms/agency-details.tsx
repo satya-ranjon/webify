@@ -24,6 +24,7 @@ import {
   FormLabel,
   FormMessage,
 } from "../ui/form";
+import FileUpload from "../global/file-upload";
 
 type Props = {
   data?: Partial<Agency>;
@@ -98,11 +99,11 @@ const AgencyDetails = ({ data }: Props) => {
                     <FormItem>
                       <FormLabel>Agency Logo</FormLabel>
                       <FormControl>
-                        {/* <FileUpload
+                        <FileUpload
                           apiEndpoint="agencyLogo"
                           onChange={field.onChange}
                           value={field.value}
-                        /> */}
+                        />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
