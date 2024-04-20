@@ -1,7 +1,7 @@
 import React from "react";
 
 const Page = () => {
-  return <div>Subaccount ID</div>;
+  return <div>Sub Account ID</div>;
 };
 
 export default Page;
